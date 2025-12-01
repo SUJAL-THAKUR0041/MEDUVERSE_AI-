@@ -1,0 +1,42 @@
+{
+  "name": "ChatHistory",
+  "type": "object",
+  "properties": {
+    "user_email": {
+      "type": "string",
+      "description": "User's email"
+    },
+    "message": {
+      "type": "string",
+      "description": "User message"
+    },
+    "response": {
+      "type": "string",
+      "description": "AI response"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "hospital_finder",
+        "medicine_guidance",
+        "educational",
+        "general"
+      ],
+      "description": "Query category"
+    },
+    "confidence_level": {
+      "type": "string",
+      "enum": [
+        "High",
+        "Medium",
+        "Low"
+      ],
+      "description": "Response confidence level"
+    }
+  },
+  "required": [
+    "user_email",
+    "message",
+    "response"
+  ]
+}

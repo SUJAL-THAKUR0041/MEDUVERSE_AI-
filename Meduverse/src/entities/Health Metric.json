@@ -1,0 +1,46 @@
+{
+  "name": "HealthMetric",
+  "type": "object",
+  "properties": {
+    "user_email": {
+      "type": "string",
+      "description": "User's email"
+    },
+    "metric_type": {
+      "type": "string",
+      "enum": [
+        "weight",
+        "blood_pressure",
+        "blood_sugar",
+        "heart_rate",
+        "temperature",
+        "sleep_hours",
+        "water_intake",
+        "steps"
+      ],
+      "description": "Type of health metric"
+    },
+    "value": {
+      "type": "string",
+      "description": "Metric value (can be numeric or text like '120/80')"
+    },
+    "unit": {
+      "type": "string",
+      "description": "Unit of measurement"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Additional notes"
+    },
+    "recorded_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date of recording"
+    }
+  },
+  "required": [
+    "user_email",
+    "metric_type",
+    "value"
+  ]
+}

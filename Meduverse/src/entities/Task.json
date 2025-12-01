@@ -1,0 +1,53 @@
+{
+  "name": "Task",
+  "type": "object",
+  "properties": {
+    "user_email": {
+      "type": "string",
+      "description": "User's email"
+    },
+    "title": {
+      "type": "string",
+      "description": "Task title"
+    },
+    "description": {
+      "type": "string",
+      "description": "Task description"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "health",
+        "study",
+        "personal",
+        "appointment"
+      ],
+      "default": "personal",
+      "description": "Task category"
+    },
+    "priority": {
+      "type": "string",
+      "enum": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "default": "medium",
+      "description": "Task priority"
+    },
+    "due_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Due date"
+    },
+    "completed": {
+      "type": "boolean",
+      "default": false,
+      "description": "Task completion status"
+    }
+  },
+  "required": [
+    "user_email",
+    "title"
+  ]
+}

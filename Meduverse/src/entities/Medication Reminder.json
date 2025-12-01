@@ -1,0 +1,70 @@
+{
+  "name": "MedicationReminder",
+  "type": "object",
+  "properties": {
+    "user_email": {
+      "type": "string",
+      "description": "User's email"
+    },
+    "medication_name": {
+      "type": "string",
+      "description": "Name of medication"
+    },
+    "dosage": {
+      "type": "string",
+      "description": "Dosage information"
+    },
+    "frequency": {
+      "type": "string",
+      "enum": [
+        "once_daily",
+        "twice_daily",
+        "thrice_daily",
+        "every_4_hours",
+        "every_6_hours",
+        "every_8_hours",
+        "weekly",
+        "as_needed"
+      ],
+      "description": "How often to take"
+    },
+    "time_slots": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Times to take medication (HH:MM format)"
+    },
+    "start_date": {
+      "type": "string",
+      "format": "date",
+      "description": "When to start"
+    },
+    "end_date": {
+      "type": "string",
+      "format": "date",
+      "description": "When to end (optional)"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Additional instructions"
+    },
+    "is_active": {
+      "type": "boolean",
+      "default": true,
+      "description": "Whether reminder is active"
+    },
+    "notification_enabled": {
+      "type": "boolean",
+      "default": true,
+      "description": "Enable push notifications"
+    }
+  },
+  "required": [
+    "user_email",
+    "medication_name",
+    "frequency",
+    "time_slots",
+    "start_date"
+  ]
+}

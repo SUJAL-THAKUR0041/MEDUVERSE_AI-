@@ -1,0 +1,78 @@
+0 verbose cli C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\npm\bin\npm-cli.js
+1 info using npm@10.9.4
+2 info using node@v22.21.1
+3 silly config load:file:C:\Program Files\nodejs\node_modules\npm\npmrc
+4 silly config load:file:E:\Meduverse\Meduverse\.npmrc
+5 silly config load:file:C:\Users\Sujal\.npmrc
+6 silly config load:file:E:\Meduverse\Meduverse\%APPDATA%\npm\etc\npmrc
+7 verbose title npm install react-leaflet leafle
+8 verbose argv "install" "react-leaflet" "leafle"
+9 verbose logfile logs-max:10 dir:E:\Meduverse\Meduverse\%APPDATA%\npm-cache\_logs\2025-11-28T17_18_19_240Z-
+10 verbose logfile E:\Meduverse\Meduverse\%APPDATA%\npm-cache\_logs\2025-11-28T17_18_19_240Z-debug-0.log
+11 silly logfile start cleaning logs, removing 1 files
+12 silly packumentCache heap:4345298944 maxSize:1086324736 maxEntrySize:543162368
+13 silly logfile done cleaning log files
+14 silly idealTree buildDeps
+15 silly fetch manifest react-leaflet@*
+16 silly packumentCache full:https://registry.npmjs.org/react-leaflet cache-miss
+17 http fetch GET 200 https://registry.npmjs.org/react-leaflet 633ms (cache miss)
+18 silly packumentCache full:https://registry.npmjs.org/react-leaflet set size:undefined disposed:false
+19 silly fetch manifest leaflet@^1.9.0
+20 silly packumentCache full:https://registry.npmjs.org/leaflet cache-miss
+21 http fetch GET 200 https://registry.npmjs.org/leaflet 215ms (cache miss)
+22 silly packumentCache full:https://registry.npmjs.org/leaflet set size:undefined disposed:false
+23 silly fetch manifest react@^19.0.0
+24 silly packumentCache full:https://registry.npmjs.org/react cache-miss
+25 http fetch GET 200 https://registry.npmjs.org/react 489ms (cache miss)
+26 silly packumentCache full:https://registry.npmjs.org/react set size:undefined disposed:false
+27 silly fetch manifest react-dom@^19.0.0
+28 silly packumentCache full:https://registry.npmjs.org/react-dom cache-miss
+29 http fetch GET 200 https://registry.npmjs.org/react-dom 305ms (cache miss)
+30 silly packumentCache full:https://registry.npmjs.org/react-dom set size:undefined disposed:false
+31 silly fetch manifest leafle@*
+32 silly packumentCache full:https://registry.npmjs.org/leafle cache-miss
+33 http fetch GET 404 https://registry.npmjs.org/leafle 914ms (cache skip)
+34 silly placeDep ROOT leafle@ OK for:  want: *
+35 silly placeDep ROOT react-leaflet@5.0.0 OK for:  want: *
+36 silly placeDep ROOT leaflet@1.9.4 OK for: react-leaflet@5.0.0 want: ^1.9.0
+37 silly placeDep ROOT react@19.2.0 OK for: react-leaflet@5.0.0 want: ^19.0.0
+38 silly placeDep ROOT react-dom@19.2.0 OK for: react-leaflet@5.0.0 want: ^19.0.0
+39 silly fetch manifest @react-leaflet/core@^3.0.0
+40 silly packumentCache full:https://registry.npmjs.org/@react-leaflet%2fcore cache-miss
+41 silly fetch manifest scheduler@^0.27.0
+42 silly packumentCache full:https://registry.npmjs.org/scheduler cache-miss
+43 http fetch GET 200 https://registry.npmjs.org/@react-leaflet%2fcore 432ms (cache miss)
+44 silly packumentCache full:https://registry.npmjs.org/@react-leaflet%2fcore set size:undefined disposed:false
+45 http fetch GET 200 https://registry.npmjs.org/scheduler 544ms (cache miss)
+46 silly packumentCache full:https://registry.npmjs.org/scheduler set size:undefined disposed:false
+47 silly placeDep ROOT scheduler@0.27.0 OK for: react-dom@19.2.0 want: ^0.27.0
+48 silly placeDep ROOT @react-leaflet/core@3.0.0 OK for: react-leaflet@5.0.0 want: ^3.0.0
+49 verbose stack HttpErrorGeneral: 404 Not Found - GET https://registry.npmjs.org/leafle - Not found
+49 verbose stack     at C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-fetch\lib\check-response.js:103:15
+49 verbose stack     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+49 verbose stack     at async RegistryFetcher.packument (C:\Program Files\nodejs\node_modules\npm\node_modules\pacote\lib\registry.js:90:19)
+49 verbose stack     at async RegistryFetcher.manifest (C:\Program Files\nodejs\node_modules\npm\node_modules\pacote\lib\registry.js:128:23)
+49 verbose stack     at async #fetchManifest (C:\Program Files\nodejs\node_modules\npm\node_modules\@npmcli\arborist\lib\arborist\build-ideal-tree.js:1202:20)
+49 verbose stack     at async #nodeFromEdge (C:\Program Files\nodejs\node_modules\npm\node_modules\@npmcli\arborist\lib\arborist\build-ideal-tree.js:1040:19)
+49 verbose stack     at async #buildDepStep (C:\Program Files\nodejs\node_modules\npm\node_modules\@npmcli\arborist\lib\arborist\build-ideal-tree.js:904:11)
+49 verbose stack     at async Arborist.buildIdealTree (C:\Program Files\nodejs\node_modules\npm\node_modules\@npmcli\arborist\lib\arborist\build-ideal-tree.js:181:7)
+49 verbose stack     at async Promise.all (index 1)
+49 verbose stack     at async Arborist.reify (C:\Program Files\nodejs\node_modules\npm\node_modules\@npmcli\arborist\lib\arborist\reify.js:131:5)
+50 verbose statusCode 404
+51 verbose pkgid leafle@*
+52 error code E404
+53 error 404 Not Found - GET https://registry.npmjs.org/leafle - Not found
+54 error 404
+55 error 404  'leafle@*' is not in this registry.
+56 error 404
+57 error 404 Note that you can also install from a
+58 error 404 tarball, folder, http url, or git url.
+59 silly unfinished npm timer reify 1764350299554
+60 silly unfinished npm timer reify:loadTrees 1764350299554
+61 verbose cwd E:\Meduverse\Meduverse
+62 verbose os Windows_NT 10.0.26200
+63 verbose node v22.21.1
+64 verbose npm  v10.9.4
+65 verbose exit 1
+66 verbose code 1
+67 error A complete log of this run can be found in: E:\Meduverse\Meduverse\%APPDATA%\npm-cache\_logs\2025-11-28T17_18_19_240Z-debug-0.log

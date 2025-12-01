@@ -1,0 +1,42 @@
+{
+  "name": "HealthTip",
+  "type": "object",
+  "properties": {
+    "user_email": {
+      "type": "string",
+      "description": "User's email"
+    },
+    "tip_category": {
+      "type": "string",
+      "enum": [
+        "nutrition",
+        "exercise",
+        "mental_health",
+        "sleep",
+        "hygiene",
+        "disease_prevention",
+        "general"
+      ],
+      "description": "Category of health tip"
+    },
+    "tip_content": {
+      "type": "string",
+      "description": "The health tip content"
+    },
+    "is_personalized": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether tip is personalized based on user profile"
+    },
+    "is_saved": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether user saved this tip"
+    }
+  },
+  "required": [
+    "user_email",
+    "tip_category",
+    "tip_content"
+  ]
+}

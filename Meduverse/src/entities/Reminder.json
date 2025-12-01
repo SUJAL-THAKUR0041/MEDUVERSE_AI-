@@ -1,0 +1,64 @@
+{
+  "name": "Reminder",
+  "type": "object",
+  "properties": {
+    "user_id": {
+      "type": "string",
+      "description": "Reference to User entity"
+    },
+    "title": {
+      "type": "string",
+      "description": "Reminder title"
+    },
+    "description": {
+      "type": "string",
+      "description": "Detailed description"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "study",
+        "medication",
+        "appointment",
+        "other"
+      ],
+      "description": "Type of reminder"
+    },
+    "scheduled_time": {
+      "type": "string",
+      "format": "date-time",
+      "description": "When to remind"
+    },
+    "repeat": {
+      "type": "string",
+      "enum": [
+        "once",
+        "daily",
+        "weekly",
+        "monthly"
+      ],
+      "default": "once",
+      "description": "Repeat frequency"
+    },
+    "completed": {
+      "type": "boolean",
+      "default": false,
+      "description": "Has reminder been completed"
+    },
+    "priority": {
+      "type": "string",
+      "enum": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "default": "medium",
+      "description": "Priority level"
+    }
+  },
+  "required": [
+    "user_id",
+    "title",
+    "scheduled_time"
+  ]
+}

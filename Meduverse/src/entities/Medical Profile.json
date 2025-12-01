@@ -1,0 +1,69 @@
+{
+  "name": "MedicalProfile",
+  "type": "object",
+  "properties": {
+    "user_email": {
+      "type": "string",
+      "description": "User's email"
+    },
+    "age": {
+      "type": "number",
+      "description": "User's age"
+    },
+    "blood_group": {
+      "type": "string",
+      "enum": [
+        "A+",
+        "A-",
+        "B+",
+        "B-",
+        "AB+",
+        "AB-",
+        "O+",
+        "O-"
+      ],
+      "description": "Blood group"
+    },
+    "allergies": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "List of allergies (medicines, food, etc.)"
+    },
+    "chronic_conditions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Chronic health conditions"
+    },
+    "current_medications": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Current medications being taken"
+    },
+    "emergency_contact_name": {
+      "type": "string",
+      "description": "Emergency contact person name"
+    },
+    "emergency_contact_phone": {
+      "type": "string",
+      "description": "Emergency contact phone number"
+    },
+    "location": {
+      "type": "string",
+      "description": "User's city/area for hospital recommendations"
+    },
+    "consent_given": {
+      "type": "boolean",
+      "default": false,
+      "description": "User consent to use medical data"
+    }
+  },
+  "required": [
+    "user_email"
+  ]
+}

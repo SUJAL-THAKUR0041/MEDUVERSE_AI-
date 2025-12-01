@@ -1,0 +1,67 @@
+{
+  "name": "MedicalAnalysis",
+  "type": "object",
+  "properties": {
+    "user_email": {
+      "type": "string",
+      "description": "User's email"
+    },
+    "symptoms": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "List of symptoms"
+    },
+    "duration": {
+      "type": "string",
+      "description": "How long symptoms have persisted"
+    },
+    "severity": {
+      "type": "string",
+      "enum": [
+        "mild",
+        "moderate",
+        "severe"
+      ],
+      "description": "Severity level"
+    },
+    "ai_analysis": {
+      "type": "string",
+      "description": "AI-generated analysis"
+    },
+    "possible_conditions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Possible medical conditions"
+    },
+    "recommendations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Recommendations"
+    },
+    "urgency_level": {
+      "type": "string",
+      "enum": [
+        "low",
+        "medium",
+        "high",
+        "emergency"
+      ],
+      "description": "How urgent to seek medical care"
+    },
+    "confidence_score": {
+      "type": "number",
+      "description": "AI confidence (0-100)"
+    }
+  },
+  "required": [
+    "user_email",
+    "symptoms",
+    "severity"
+  ]
+}

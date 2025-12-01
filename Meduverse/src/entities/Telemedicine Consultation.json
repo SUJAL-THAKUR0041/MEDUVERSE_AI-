@@ -1,0 +1,62 @@
+{
+  "name": "TelemedicineConsultation",
+  "type": "object",
+  "properties": {
+    "user_email": {
+      "type": "string",
+      "description": "User's email"
+    },
+    "doctor_name": {
+      "type": "string",
+      "description": "Doctor's name"
+    },
+    "specialization": {
+      "type": "string",
+      "description": "Doctor's specialization"
+    },
+    "consultation_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date of consultation"
+    },
+    "consultation_time": {
+      "type": "string",
+      "description": "Time slot"
+    },
+    "reason": {
+      "type": "string",
+      "description": "Reason for consultation"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "scheduled",
+        "in_progress",
+        "completed",
+        "cancelled"
+      ],
+      "default": "scheduled",
+      "description": "Consultation status"
+    },
+    "meeting_link": {
+      "type": "string",
+      "description": "Video call link"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Doctor's notes after consultation"
+    },
+    "prescription": {
+      "type": "string",
+      "description": "Prescription details"
+    }
+  },
+  "required": [
+    "user_email",
+    "doctor_name",
+    "specialization",
+    "consultation_date",
+    "consultation_time",
+    "reason"
+  ]
+}

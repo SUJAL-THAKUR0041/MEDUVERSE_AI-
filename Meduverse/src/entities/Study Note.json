@@ -1,0 +1,49 @@
+{
+  "name": "StudyNote",
+  "type": "object",
+  "properties": {
+    "user_email": {
+      "type": "string",
+      "description": "User's email"
+    },
+    "subject": {
+      "type": "string",
+      "enum": [
+        "anatomy",
+        "physiology",
+        "biochemistry",
+        "pharmacology",
+        "pathology",
+        "microbiology",
+        "other"
+      ],
+      "description": "Medical subject"
+    },
+    "topic": {
+      "type": "string",
+      "description": "Topic name"
+    },
+    "content": {
+      "type": "string",
+      "description": "Note content"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Tags for organization"
+    },
+    "is_favorite": {
+      "type": "boolean",
+      "default": false,
+      "description": "Favorite note"
+    }
+  },
+  "required": [
+    "user_email",
+    "subject",
+    "topic",
+    "content"
+  ]
+}

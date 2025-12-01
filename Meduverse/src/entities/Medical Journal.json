@@ -1,0 +1,79 @@
+{
+  "name": "MedicalJournalEntry",
+  "type": "object",
+  "properties": {
+    "user_email": {
+      "type": "string",
+      "description": "User's email"
+    },
+    "title": {
+      "type": "string",
+      "description": "Journal entry title"
+    },
+    "entry_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date of entry"
+    },
+    "symptoms": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Symptoms experienced"
+    },
+    "mood": {
+      "type": "string",
+      "enum": [
+        "excellent",
+        "good",
+        "fair",
+        "poor",
+        "very_poor"
+      ],
+      "description": "Overall mood/feeling"
+    },
+    "sleep_hours": {
+      "type": "number",
+      "description": "Hours of sleep"
+    },
+    "exercise_minutes": {
+      "type": "number",
+      "description": "Minutes of exercise"
+    },
+    "water_intake": {
+      "type": "number",
+      "description": "Glasses of water"
+    },
+    "meals": {
+      "type": "string",
+      "description": "Meals consumed"
+    },
+    "medications_taken": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Medications taken today"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Additional notes"
+    },
+    "ai_insights": {
+      "type": "string",
+      "description": "AI-generated insights"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Tags for categorization"
+    }
+  },
+  "required": [
+    "user_email",
+    "entry_date"
+  ]
+}

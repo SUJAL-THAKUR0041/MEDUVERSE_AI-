@@ -1,0 +1,34 @@
+{
+  "name": "SavedHospitals",
+  "type": "object",
+  "properties": {
+    "user_email": {
+      "type": "string",
+      "description": "User's email"
+    },
+    "hospital_name": {
+      "type": "string",
+      "description": "Hospital name"
+    },
+    "address": {
+      "type": "string",
+      "description": "Hospital address"
+    },
+    "speciality": {
+      "type": "string",
+      "description": "Hospital speciality"
+    },
+    "phone": {
+      "type": "string",
+      "description": "Hospital phone number"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Personal notes about this hospital"
+    }
+  },
+  "required": [
+    "user_email",
+    "hospital_name"
+  ]
+}

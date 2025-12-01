@@ -1,0 +1,57 @@
+{
+  "name": "Conversation",
+  "type": "object",
+  "properties": {
+    "user_id": {
+      "type": "string",
+      "description": "Reference to User entity"
+    },
+    "session_id": {
+      "type": "string",
+      "description": "Unique session identifier"
+    },
+    "messages": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "role": {
+            "type": "string",
+            "enum": [
+              "user",
+              "assistant"
+            ]
+          },
+          "content": {
+            "type": "string"
+          },
+          "timestamp": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "used_context": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "IDs of documents/profiles used"
+          }
+        }
+      },
+      "description": "Chat messages in this conversation"
+    },
+    "topic": {
+      "type": "string",
+      "description": "Main topic of conversation"
+    },
+    "is_medical": {
+      "type": "boolean",
+      "default": false,
+      "description": "Contains medical queries"
+    }
+  },
+  "required": [
+    "user_id",
+    "session_id"
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "name": "EducationProfile",
+  "type": "object",
+  "properties": {
+    "user_id": {
+      "type": "string",
+      "description": "Reference to User entity"
+    },
+    "course": {
+      "type": "string",
+      "description": "Course name (e.g., JEE PCM, NEET, Medical Student)"
+    },
+    "year": {
+      "type": "string",
+      "description": "Current year/semester"
+    },
+    "completed_chapters": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "List of completed chapters/topics"
+    },
+    "weak_topics": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Topics needing more practice"
+    },
+    "study_hours_preference": {
+      "type": "string",
+      "description": "Preferred study time (e.g., 18:00-21:00)"
+    },
+    "goals": {
+      "type": "string",
+      "description": "Educational goals"
+    }
+  },
+  "required": [
+    "user_id"
+  ]
+}
